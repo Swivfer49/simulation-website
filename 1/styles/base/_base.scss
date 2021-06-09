@@ -1,0 +1,12 @@
+body{
+    background-image: radial-gradient($primary-neutral-color, $secondary-neutral-color);
+    background-repeat: no-repeat;
+}
+
+p{
+    color: $secondary-color;
+}
+
+h1{
+    color: $primary-color;
+}

@@ -1,0 +1,51 @@
+#simulationGallery {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  -ms-grid-rows: (minmax(300px, 1fr))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+#simulationGallery a {
+  text-decoration: none;
+  color: #6db784;
+}
+
+#simulationGallery .galleryTile {
+  width: 100%;
+  display: block;
+  height: 100%;
+  margin: 0;
+  font-size: x-large;
+  text-align: center;
+  border-radius: 12px;
+}
+
+#simulationGallery .galleryTile#particle {
+  background-image: url("../pictures/particleSimulation.JPG");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#simulationGallery .galleryTile#raycast {
+  background-image: url("../pictures/raycastSimulation.JPG");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body {
+  background-image: radial-gradient(#98d4d2, #709e9c);
+  background-repeat: no-repeat;
+}
+
+p {
+  color: #f9e45b;
+}
+
+h1 {
+  color: #ffffff;
+}
