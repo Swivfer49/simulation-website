@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     background-image: radial-gradient($primary-neutral-color, $secondary-neutral-color);
     background-repeat: no-repeat;

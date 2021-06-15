@@ -1,6 +1,6 @@
-let particles=[];
+let particles=[];//the particles
 let names;
-let blurDisplay;
+let blurDisplay;//the canvas that stores the blur graphics
 function preload(){
    
     names=[
@@ -34,6 +34,7 @@ function preload(){
 
 }
 
+//function that adds a particle
 function addParticle(inputId1,inputId2){
     let n1=document.getElementById(inputId1).value;
     let n2=document.getElementById(inputId2).value;
@@ -44,10 +45,11 @@ function addParticle(inputId1,inputId2){
 }
 
 function setup(){
-    createCanvas(windowWidth/2,windowHeight/2);
-    blurDisplay=createGraphics(windowWidth/2,windowHeight/2);
+    createCanvas(windowWidth/2,windowHeight/2);//create a canvas that is half the width and height of the window
+    blurDisplay=createGraphics(windowWidth/2,windowHeight/2);//initialize
     
     
+    //does nothing
     for(let i=0;i<names.length;i++){
         //particles[i]=new particle(random(0,width),random(0,height));
         //particles[i].name=names[i];
@@ -106,6 +108,8 @@ for(let j=0;j<particles.length;j++){
         particles[i].display();
     }
 }
+
+//this stores the particle information
 class Particle{
     
     constructor(x,y){
@@ -246,6 +250,7 @@ class Particle{
 
 }
 
+//this resizes the canvas when the window is resized
 function windowResized() {
     resizeCanvas(windowWidth/2, windowHeight/2);
     blurDisplay=createGraphics(width,height);

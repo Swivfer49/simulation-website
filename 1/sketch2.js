@@ -2,12 +2,17 @@ let lines=[];
 
 function setup(){
 
+    //setup the canvas
     createCanvas(windowWidth,windowHeight);
+
+    //make all the lines
     for(let i=0;i<10;i++){
 
         lines[i]=new Bound(random(width),random(height),random(width),random(height));
 
     }
+
+    //add lines for the edges
     lines.push(new Bound(0,0,width,0));
     lines.push(new Bound(width,0,width,height));
     lines.push(new Bound(width,height,0,height));
@@ -22,6 +27,8 @@ function draw(){
     rect(0,0,width,height);
     stroke(255,100);
 
+
+    //raycasting origin mouse pointer
     let pos=createVector(mouseX,mouseY);
     for(let r=0;r<360;r+=0.5){
 
@@ -35,14 +42,22 @@ function draw(){
 
 }
 
+//a class that is a line
 class Bound{
 
     constructor(x1,y1,x2,y2){
+
+        //the first point
         this.pos1=createVector(x1,y1);
+
+        //the second point
         this.pos2=createVector(x2,y2);
     }
 
 }
+
+//is like a laser
+//returns a point
 function raycast(pos,dir,lns){
 
     let record=Infinity;
@@ -65,6 +80,8 @@ function raycast(pos,dir,lns){
 
 }
 
+//is like a laser
+//returns a point
 function rayCastLine(pos,dir,ln){
 
     const x1=ln.pos1.x;
